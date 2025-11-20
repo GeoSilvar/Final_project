@@ -1,0 +1,53 @@
+asili-ssms/
+├── backend/
+│   ├── app/
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── Dockerfile
+├── docker-compose.yml
+└── README.md
+
+
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Frontend      │    │    Backend API   │    │   Database      │
+│   (Next.js)     │◄──►│   (FastAPI)      │◄──►│   (MySQL)       │
+│                 │    │                  │    │                 │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                        │                       │
+         │                        │                       │
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   PWA Service   │    │   ML Services    │    │   Cache Layer   │
+│   Worker        │    │   (Scikit-learn) │    │   (Redis)       │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+
+Infrastructure
+
+Component	                Technology	                Purpose
+Containerization	        Docker	                        Application packaging and deployment
+Orchestration	                Docker Compose	                Multi-container management
+Database	                MySQL 8.0	                Primary data storage
+Cache	                        Redis	                        Session storage and caching
+Hosting	                        Cloud (Kenyan)	                Data residency compliance
+
+Frontend Layer
+
+Component	               Technology	                 Purpose
+Framework	               Next.js 14	                 React framework with SSR capabilities
+Language	               TypeScript	                 Type-safe JavaScript development
+Styling	                       Tailwind CSS	                 Utility-first CSS framework
+Charts	                       Chart.js	                         Data visualization for analytics
+State Management	       React Context	                 Lightweight state management
+PWA	                       Next-PWA	                         Progressive Web App capabilities
+
+Backend Layer
+
+Component	              Technology	                 Purpose
+Framework	              FastAPI	                         High-performance Python API framework
+Database ORM	              SQLAlchemy 2.0	                 Database abstraction and modeling
+Authentication	              JWT	                         Secure token-based authentication
+Payment Integration	      M-Pesa API	                 Mobile money payments
+Machine Learning	      Scikit-learn	                 Predictive analytics
+Caching	                      Redis	                         Session and data caching
